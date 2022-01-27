@@ -71,10 +71,9 @@
 
 /* BODY ============================== */
 
-  #body-container {
+  .body-container {
     height: 100%;
-
-    /* padding: 0 1rem; */
+    min-width: 350px;
 
     display: flex;
     flex-direction: column;
@@ -83,12 +82,13 @@
     font-family: 'Roboto', sans-serif;
   }
 
-
   /* START OF HEADER AND NAV-BAR */
 
     /* header */
     #header {
       padding: 0 1rem;
+
+      /* width: 100vw; */
 
       display: flex;
       justify-content: space-between;
@@ -142,6 +142,8 @@
 
     .container {
       padding: 0 5rem;
+
+      /* width: 100%; */
     }
 
     /* start section */
@@ -152,9 +154,9 @@
     #start-section {      
       display: flex;
       justify-content: space-between;
-      /* gap: 5rem; */
 
-      width: 750px;
+      max-width: 750px;
+      min-width: 350px;
     }
 
     #start-section-div {
@@ -201,7 +203,8 @@
       flex-direction: column;
       justify-content: center;
 
-      width: 750px;
+      max-width: 750px;
+      min-width: 350px;
     }
 
     #services-section-1 {
@@ -265,7 +268,6 @@
     }
 
     #services-section-2 #weCallYou-button {
-      /* height: 2rem; */
       width: 10rem;
 
       transition: 0.1s ease-out;
@@ -280,6 +282,9 @@
       display: flex;
       justify-content: center;
       gap: 1.5rem;
+
+      /* max-width: 750px; */
+      min-width: 350px;
     }
 
     #feedback-section .user-avatar {
@@ -375,4 +380,36 @@
   }
   #socialMedia-links li:hover {
     transform: translateY(-3px);
+  }
+
+/* MEDIAS QUERIES ========== */
+
+  @media screen and (max-width: 830px) {
+    #start-section {      
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    #services-section-1 {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    #services-section-1 ul#benefits {
+      width: auto;
+    }
+
+    #services-section-2 {
+      align-items: center;
+    }
+
+    #services-section-2-inputArea {
+      flex-direction: column;
+      /* align-items: center; */
+    }
+    #services-section-2 #weCallYou-button {
+      width: auto;
+    }
   }
